@@ -13,12 +13,12 @@ class Product extends Model
     use HasFactory;
     protected $table='product';
 
-    protected $fillable=['name','price'];
+    protected $fillable=['name','price','tag'];
     public $timestamps=false;
 
     public function getPriceEurAttribute(){
 //        $product->price_eur
-        return (new CurrencyService())->convert($this->price,'usd','eur');
+//        return (new CurrencyService())->convert($this->price,'usd','eur');
     }
 //    public function CreatedAt() : Attribute
 //    {

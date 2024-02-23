@@ -11,6 +11,7 @@ class AdminModel extends Authenticatable
     use HasFactory;
 
     protected $table='admin';
+    protected $guard='admin';
     public $rememberTokenName = null;
 
     protected $fillable=['email','password','is_admin'];

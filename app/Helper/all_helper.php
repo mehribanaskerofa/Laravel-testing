@@ -71,7 +71,7 @@ if (!function_exists('translated_date')) {
 if (!function_exists('static_get')) {
     function static_get($id)
     {
-        return \App\Models\StaticModel::with('translations')->where('id',$id)->first()->title ?? null;
+//        return \App\Models\StaticModel::with('translations')->where('id',$id)->first()->title ?? null;
     }
 }
 
@@ -82,5 +82,15 @@ if (!function_exists('_langUrl')) {
         $segments[0] = $lang;
         //config('app.url')
         return config('http://127.0.0.1:8000').'/'.implode('/',$segments);
+    }
+}
+
+
+if (!function_exists('redis_connect')) {
+    function _redisConnect(){
+        $redis = new Redis();
+        $redis->connect(env('REDIS_HOST'), env('REDIS_PORT'));
+        $redis->auth(env('REDIS_PASSWORD'));
+        return $redis;
     }
 }

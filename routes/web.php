@@ -34,3 +34,18 @@ Route::get('/salam/salam',function (){
 
 Route::resource('products',\App\Http\Controllers\Front\ProductController::class)->except(['show'])->middleware('is_admin');
 Route::resource('adv',\App\Http\Controllers\Admin\AdvController::class)->except(['show']);;
+
+
+Route::get('product/{id}',[\App\Http\Controllers\RedisController::class,'product_view'])->name('product_view');
+Route::get('datas',[\App\Http\Controllers\RedisController::class,'products_data'])->name('products_data');
+Route::get('datass',[\App\Http\Controllers\RedisController::class,'products_datas'])->name('products_datas');
+Route::get('/tag-filter',[\App\Http\Controllers\RedisController::class,'product_create'])->name('product_create');
+Route::get('filter/{tag}',[\App\Http\Controllers\RedisController::class,'products_tag'])->name('products_tag');
+
+
+Route::get('/{id}/post',[\App\Http\Controllers\RedisController::class,'post_show'])->name('post_show');
+Route::get('/{id}/post',[\App\Http\Controllers\RedisController::class,'post_update'])->name('post_update');
+Route::get('/{id}/feed',[\App\Http\Controllers\RedisController::class,'feed_show'])->name('feed_show');
+
+Route::get('/register',[\App\Http\Controllers\RedisController::class,'redister_admin'])->name('redister_admin');
+Route::get('/json',[\App\Http\Controllers\RedisController::class,'json_redis'])->name('redister_admin');
