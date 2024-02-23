@@ -6,6 +6,8 @@
 
 #redis
 1. https://youtu.be/dGAgxozNWFE?si=mOUDojzgMgFHckMh
-2. https://www.youtube.com/watch?v=7CUt4yWeRQE&list=PL83Wfqi-zYZEnzA9nguVbC-USbBIlRG0y&ab_channel=Redis
-3. https://www.youtube.com/watch?v=S_jA39Uayak&list=PLXM5y5j_b0mMdVF5p_2ug_b5tWqah_tfJ&ab_channel=ScaleYourCode
-4. https://youtu.be/a4yX7RUgTxI?si=BHAF2IIofJ_4VTc6
+2. https://redis.io/commands/
+3. https://www.youtube.com/watch?v=yta9xLUGKgM&list=PL4cUxeGkcC9h3V2eqhi8rRdIDJshP-b4P&index=2&ab_channel=NetNinja
+4. https://www.youtube.com/watch?v=7CUt4yWeRQE&list=PL83Wfqi-zYZEnzA9nguVbC-USbBIlRG0y&ab_channel=Redis
+5. https://www.youtube.com/watch?v=S_jA39Uayak&list=PLXM5y5j_b0mMdVF5p_2ug_b5tWqah_tfJ&ab_channel=ScaleYourCode
+6. https://youtu.be/a4yX7RUgTxI?si=BHAF2IIofJ_4VTc6
