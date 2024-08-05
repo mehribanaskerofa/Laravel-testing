@@ -13,16 +13,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    $redis = new Redis();
-    $redis->connect(env('REDIS_HOST'), env('REDIS_PORT'));
-    $redis->auth(env('REDIS_PASSWORD'));
-
-    $redis->set('example_key', 'example_value');
-    $value = $redis->get('name');
-return bcrypt('admin');
+Route::get('/',function(){
+    dd(2);
 });
+// Route::get('/', function () {
+//     $redis = new Redis();
+//     $redis->connect(env('REDIS_HOST'), env('REDIS_PORT'));
+//     $redis->auth(env('REDIS_PASSWORD'));
+
+//     $redis->set('example_key', 'example_value');
+//     $value = $redis->get('name');
+// return bcrypt('admin');
+// });
 
 Route::get('/admin/login',[AdminController::class,'loginView'])->name('admin.login-view');
 Route::post('/admin/login',[AdminController::class,'login'])->name('admin.login');
